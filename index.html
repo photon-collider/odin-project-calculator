@@ -11,35 +11,55 @@
     <h1>Calculator App</h1>
 
     <div id="calculator-container">
-      <div id="display" class="dark-blue"> Hellow </div>
+      <div id="display" class="dark-blue"> </div>
 
       <div class="button-container">
-        <button type="button" name="button" class="btn light-blue">AC</button>
-        <button type="button" name="button" class="btn light-blue">+/-</button>
-        <button type="button" name="button" class="btn light-blue">%</button>
-        <button type="button" name="button" class="btn orange">/</button>
+        <button type="button" name="button"
+                class="btn light-blue" id='btn-ac'>AC</button>
+        <button type="button" name="button"
+                class="btn light-blue" id='btn-plus-minus'>+/-</button>
+        <button type="button" name="button"
+                class="btn light-blue" id='btn-percent'>%</button>
+        <button type="button" name="button"
+                class="btn orange" id='btn-divide'>/</button>
 
-        <button type="button" name="button" class="btn dark-blue">7</button>
-        <button type="button" name="button" class="btn dark-blue">8</button>
-        <button type="button" name="button" class="btn dark-blue">9</button>
-        <button type="button" name="button" class="btn orange">x</button>
+        <button type="button" name="button"
+                class="btn dark-blue number" id='btn-7'>7</button>
+        <button type="button" name="button"
+                class="btn dark-blue number" id='btn-8'>8</button>
+        <button type="button" name="button"
+                class="btn dark-blue number" id='btn-9'>9</button>
+        <button type="button" name="button"
+                class="btn orange" id='btn-multiply'>x</button>
 
-        <button type="button" name="button" class="btn dark-blue">4</button>
-        <button type="button" name="button" class="btn dark-blue">5</button>
-        <button type="button" name="button" class="btn dark-blue">6</button>
-        <button type="button" name="button" class="btn orange">-</button>
+        <button type="button" name="button"
+                class="btn dark-blue number" id='btn-4'>4</button>
+        <button type="button" name="button"
+                class="btn dark-blue number" id='btn-5'>5</button>
+        <button type="button" name="button"
+                class="btn dark-blue number" id='btn-6'>6</button>
+        <button type="button" name="button"
+                class="btn orange" id='btn-minus'>-</button>
 
-        <button type="button" name="button" class="btn dark-blue">1</button>
-        <button type="button" name="button" class="btn dark-blue">2</button>
-        <button type="button" name="button" class="btn dark-blue">3</button>
-        <button type="button" name="button" class="btn orange">+</button>
+        <button type="button" name="button"
+                class="btn dark-blue number" id='btn-1'>1</button>
+        <button type="button" name="button"
+                class="btn dark-blue number" id='btn-2'>2</button>
+        <button type="button" name="button"
+                class="btn dark-blue number" id='btn-3'>3</button>
+        <button type="button" name="button"
+                class="btn orange" id='btn-plus'>+</button>
 
-        <button type="button" name="button" class="btn dark-blue" id='btn-0'>0</button>
-        <button type="button" name="button" class="btn dark-blue">.</button>
+        <button type="button" name="button"
+                class="btn dark-blue number" id='btn-0'>0</button>
+        <button type="button" name="button" class="btn dark-blue"
+                id='btn-decimal'>.</button>
         <button type="button" name="button"
                 class="btn orange" id='btn-equal'>=</button>
 
       </div>
     </div>
+
+    <script type="text/javascript" src="calculator.js"></script>
   </body>
 </html>
