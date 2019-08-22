@@ -4,6 +4,7 @@ let firstNumber = null;
 let clearDisplay = false;
 
 const display = document.querySelector('#display');
+display.textContent = "";
 
 const btnDecimal = document.querySelector('#btn-decimal');
 btnDecimal.addEventListener('click', () =>{
@@ -89,16 +90,41 @@ btnEqual.addEventListener('click', () => {
   }
 });
 
+const btnPercent = document.querySelector('#btn-percent');
+btnPercent.addEventListener('click', () => {
+  if (firstNumber !== null){
+    let percent = (+display.textContent)/100;
+    let secondNumber = percent * firstNumber;
+    computedResult = operate(firstNumber, secondNumber, operatorStr);
+    display.textContent = computedResult.toString();
+
+    firstNumber = null;
+  }
+});
+
+
 const numberButtons = document.querySelectorAll('.number');
 numberButtons.forEach((button) => {
   button.addEventListener('click', () => {
     buttonID = button.id;
+    pressedDigit = buttonID[buttonID.length-1];
+
     if(clearDisplay){
-      display.textContent = buttonID[buttonID.length-1];
+      display.textContent = pressedDigit;
       clearDisplay = false;
     }
-    else{
-      display.textContent += buttonID[buttonID.length-1];
+
+    else {
+      let pressedZero = (pressedDigit === "0");
+      let displayingZero = (display.textContent.charAt(0) === "0");
+      let emptyDisplay = (display.textContent === "");
+
+      if( pressedZero && (displayingZero || emptyDisplay)){
+        clearDisplay = true;
+      }
+      else {
+        display.textContent += buttonID[buttonID.length-1];
+      }
     }
 
   });

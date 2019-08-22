@@ -83,3 +83,13 @@ h1 {
 .orange {
   background-color:	#F8C525;
 }
+
+@media only screen and (max-width: 500px){
+  #display {
+    font-size: 100%;
+  }
+
+  .btn {
+    font-size: 100%;
+  }
+}
